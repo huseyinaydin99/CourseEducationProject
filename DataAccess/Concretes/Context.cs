@@ -14,7 +14,7 @@ public class Context : DbContext
 {
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer("Server=DESKTOP-13123BI; Initial Catalog=CourseEducationProjectDB; Integrated Security=true;");
+        optionsBuilder.UseSqlServer("Server=DESKTOP-13123BI; Initial Catalog=CourseEducationProjectDB; Integrated Security=true; TrustServerCertificate=true");
     }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

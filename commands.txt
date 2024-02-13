@@ -1,0 +1,5 @@
+Add-Migration mig_add_all_entities -context Context
+Update-Database -context Context
+
+Baðlantý sicimi yani ipi yani string'i:
+"Server=DESKTOP-13123BI; Initial Catalog=CourseEducationProjectDB; Integrated Security=true; TrustServerCertificate=true"
