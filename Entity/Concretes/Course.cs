@@ -14,6 +14,6 @@ public class Course : IEntity
     public string Description { get; set; }
     public double Price { get; set; }
     //public int CategoryID { get; set; }
-    public Category Category { get; set; }
-    public Instructor Instructor { get; set; }
+    public Category Category { get; set; } = null!;
+    public Instructor Instructor { get; set; } = null!;
 }

@@ -17,33 +17,52 @@ using Entity.Concretes;
  */
 
 
+Category category = new Category()
+{
+    //Courses = new List<Course>() { course1, course2 },
+    Name = "Veritabanı Programlama"
+};
+
+Instructor instructor = new()
+{
+    Name = "Buğra",
+    Surname = "Dost",
+    Salary = 8000,
+    //Courses = new List<Course> { course1, course2 }
+};
+
 Course course1 = new Course();
-course1.Name = "C#";
-course1.Description = "C# Microsoft usulü Java'dır.";
+course1.Name = "TSQL";
+course1.Description = "TSQL MSSQLServer'ın Procedural dilidir.";
 course1.Instructor = null;
 course1.Category = null;
 course1.Price = 50;
 
 Course course2 = new Course();
-course2.Name = "Java";
-course2.Description = "Java açık kaynak kodlu, sıradan işletmeli, hem derlenen hem yorumlanan, derlendiğinde Java'nın byte koduna derlenen, JVM üzerinde yorumlanıp işletim sistemi koduna çevrilen, platform bağımsız programlama dili ve teknoloji imparatorluğudur. Hem derlenme hemde yorunlanması ve platform bağımsızlığı onu özel kılıyor. Bili the GTS C#'ı Java'dan Windows'u ise MacOS'dan çaldı.";
-course2.Instructor = null;
-course2.Category = null;
+course2.Name = "PL/SQL";
+course2.Description = "PL/SQL Oracle'ın Procedural dilidir.";
+course2.Instructor = instructor;
+course2.Category = category;
 course2.Price = 50;
 
-Category category = new Category()
-{
-    Courses = new List<Course>() { course1, course2 },
-    Name = "Nesne Tabanlı Programlama"
-};
+instructor.Courses.Add(course1);
+instructor.Courses.Add(course2);
 
-Instructor instructor = new()
-{
-    Name = "Hüseyin",
-    Surname = "AYDIN",
-    Salary = 999999999,
-    Courses = new List<Course> { course1, course2 }
-};
+category.Courses.Add(course1);
+category.Courses.Add(course2);
 
+
+//Insert
+/*
 InstructorManager instrcutorManager = new InstructorManager(new EfInstructorDal());
-instrcutorManager.TInsert(instructor);
+instrcutorManager.TInsert(instructor);*/
+
+CategoryManager categoryManager = new CategoryManager(new EfCategoryDal());
+categoryManager.TInsert(category);
+
+/*
+CourseManager courseManager = new CourseManager(new EfCourserDal());
+courseManager.TInsert(course1);
+courseManager.TInsert(course2);*/
+
+Console.WriteLine("Kayıt işlemi başarılı");

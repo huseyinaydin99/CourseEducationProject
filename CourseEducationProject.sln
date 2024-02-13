@@ -16,6 +16,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Migration Command", "Migrat
 		commands.txt = commands.txt
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{0410910A-9C2E-4165-B9B5-21D181F7CE08}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\..\Desktop\sql1.png = ..\..\..\..\..\Desktop\sql1.png
+		..\..\..\..\..\Desktop\sql2.png = ..\..\..\..\..\Desktop\sql2.png
+		..\..\..\..\..\Desktop\sql3.png = ..\..\..\..\..\Desktop\sql3.png
+		..\..\..\..\..\Desktop\sql4.png = ..\..\..\..\..\Desktop\sql4.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
