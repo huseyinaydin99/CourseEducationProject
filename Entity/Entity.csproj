@@ -6,8 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\AydinCompany.Core\AydinCompany.Core.csproj" />
-  </ItemGroup>
-
 </Project>
