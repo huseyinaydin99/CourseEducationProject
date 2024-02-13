@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Business.Concretes;
 
-public class InstructorManager : ICategoryService
+public class InstructorManager : IInstructorService
 {
     private readonly IInstructorDal _instructorDal;
 
@@ -18,27 +18,27 @@ public class InstructorManager : ICategoryService
         _instructorDal = instructorDal;
     }
 
-    public void TDelete(Category t)
+    public void TDelete(Instructor t)
     {
         _instructorDal.Delete(t);
     }
 
-    public Category TGetByID(int id)
+    public Instructor TGetByID(int id)
     {
         return _instructorDal.GetByID(id);
     }
 
-    public List<Category> TGetList()
+    public List<Instructor> TGetList()
     {
         return _instructorDal.GetList();
     }
 
-    public void TInsert(Category t)
+    public void TInsert(Instructor t)
     {
         _instructorDal.Insert(t);
     }
 
-    public void TUpdate(Category t)
+    public void TUpdate(Instructor t)
     {
         _instructorDal.Update(t);
     }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Abstracts;
 
-public interface IInstructorDal : IGenericDal<Category>
+public interface IInstructorDal : IGenericDal<Instructor>
 {
 
 }

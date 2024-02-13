@@ -12,6 +12,10 @@ namespace DataAccess.Concretes;
 
 public class Context : DbContext
 {
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        optionsBuilder.UseSqlServer("Server=DESKTOP-13123BI; Initial Catalog=CourseEducationProjectDB; Integrated Security=true;");
+    }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Category>()
